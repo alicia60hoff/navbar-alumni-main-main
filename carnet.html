@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Carné de Identificación</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 20px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #carnetOutput {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        #carnetCard {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        #carnetCard img {
+            max-width: 100%;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Generador de Carné de Identificación</h1>
+    <form id="idForm">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" required>
+
+        <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+        <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+
+        <label for="foto">URL de la Foto:</label>
+        <input type="url" id="foto" name="foto" required>
+
+        <button type="button" onclick="generarCarnet()">Generar Carné</button>
+    </form>
+
+    <div id="carnetOutput"></div>
+
+    <script>
+        // Datos fijos del club
+        const clubNombre = "Asociacion Club Alumni";
+        const clubLogo = "img/alumnilogo.png";
+      
+
+        function generarCarnet() {
+            const nombre = document.getElementById('nombre').value;
+            const apellido = document.getElementById('apellido').value;
+            const fechaNacimiento = document.getElementById('fechaNacimiento').value;
+            const foto = document.getElementById('foto').value;
+
+            const carnetOutput = document.getElementById('carnetOutput');
+            carnetOutput.innerHTML = `
+                <div id="carnetCard">
+                    <h2>Carné de Identificación</h2>
+                    <img src="${clubLogo}" alt="Logo del Club ${clubNombre}" style="max-width: 80px; margin-bottom: 10px;">
+                    <p><strong>Nombre:</strong> ${nombre} ${apellido}</p>
+                    <p><strong>Fecha de Nacimiento:</strong> ${fechaNacimiento}</p>
+                    <p><strong>Club:</strong> ${clubNombre}</p>
+                    <img src="${foto}" alt="Foto de ${nombre} ${apellido}" style="max-width: 100%; border-radius: 4px;">
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>

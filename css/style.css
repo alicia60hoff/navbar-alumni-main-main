@@ -1,0 +1,272 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: content-box;
+}
+
+body{
+font-family: sans-serif;
+padding: 90px 0px 0;
+
+
+
+}
+main{
+text-align: center;
+margin-bottom: 10px;
+
+
+}
+footer{
+width: 100%;
+height: auto;
+}
+
+.header{
+background: red;
+height: 80px;
+position: fixed;
+width: 100%;
+top: 0;
+left: 0;
+z-index: 40;
+}
+
+.logo{
+display: inline-block;
+vertical-align: middle;
+width: 80px;
+}
+.logo:hover{
+transition-duration: .25s;
+transform: scale(1.1);
+filter: drop-shadow(0px 0px 14px yellow);
+}
+.nav{
+display: flex;
+justify-content: space-between;
+max-width: 992px;
+margin: 0 auto;
+
+}
+
+.enlace{
+color: white;
+text-decoration: none;
+}
+
+
+.nav-menu{
+display: flex;
+margin-right: 40px;
+list-style: none;
+z-index: 1000;
+}
+.slider{
+z-index: 30;
+}
+.lista{
+font-size: 18px;
+margin: 0 10px;
+line-height: 80px;
+text-transform: uppercase;
+width: max-content;
+}
+
+.enlace{
+padding: 8px 12px;
+border-radius: 3px;
+}
+
+.enlace:hover{
+background-color: white;
+color: red;
+}
+
+.burga{
+cursor: pointer;
+
+}
+.mostrar{
+left: 0;
+}
+.mostrarM{
+visibility: visible;
+}
+.d-item{
+height: 600px;
+
+}
+.d-img{
+width:100%;
+height: 100%;
+object-fit:cover;
+
+}
+.hero{
+width: 100%;
+}
+
+.texto{
+text-align: justify;
+}
+.texto h1{
+text-align: center;
+}
+.grid-container{
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+background-color: white;
+color: azure;
+}
+.grid-container div{
+background-color: red;
+margin: 10px;
+text-align: center;
+
+}
+.footer2{
+width: 100%;
+text-align: center;
+background-color: goldenrod;
+height: 100px;
+
+}
+.nav-menu1{
+display: block;
+margin-right: 40px;
+background-color: red;
+min-width: 50px;
+
+display: none;
+list-style: none;
+}
+.subMenu{
+.nav-menu1{
+    display: block;
+    margin-right: 40px;
+    background-color: red;
+    min-width: 50px;
+
+    
+    list-style: none;
+}
+
+}
+.grid-container1{
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+background-color: white;
+color: azure;
+height: 200px;
+
+}
+.grid-container1 div{
+background-color: red;
+
+text-align: center;
+
+}
+
+/*styles formulario contacto*/
+.main-form{
+display: flex;
+width: 100%;
+height: auto;
+justify-content: center;
+
+}
+.contact-form{
+display: grid;
+grid-template-columns: 1fr;
+grid-template-rows: info  mensaje;
+gap:10px;
+width: 600px;
+height: auto;
+border: 1px solid;
+
+
+}
+
+
+
+@media(max-width:900px){
+.header{
+    background: red;
+    height: 80px;
+    display: flex;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+.nav-menu{
+    display: block;
+    margin-right: 40px;
+    background-color: red;
+    min-width: 50px;
+
+ 
+    list-style: none;
+}
+.lista{
+    background-color: red;
+    
+}
+.nav{
+    background-color: red;
+}
+.nav-menu{
+    visibility: hidden;
+    background-color: red;
+    width: 100%;
+   
+}
+li.lista{
+    background-color: red;
+    width: 100%;
+    
+    
+}
+.mostrarM{
+    visibility: visible;
+}
+.img{
+    width: 600px !important;
+    height: auto !important;
+     
+}
+footer{
+    display: grid;
+    grid-row: auto;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    
+    background-color: white;
+    color: azure;
+    
+}
+.grid-container div{
+text-align: center;
+margin-bottom: 10px;
+background-color: red;
+
+
+
+}
+.grid-container1{
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: white;
+    color: azure;
+    position:relative;
+}
+.grid-container1 div{
+text-align: center;
+margin-bottom: 10px;
+background-color: red;
+}
+}
+
+
